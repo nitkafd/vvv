@@ -1,0 +1,88 @@
+from kivy.app import App
+from kivy.uix.gridlayout import GridLayout
+from kivy.uix.boxlayout import BoxLayout
+from kivy.uix.screenmanager import ScreenManager, Screen
+from kivy.uix.screenmanager import WipeTransition, SwapTransition
+
+import os
+os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
+
+class OrderScreen(Screen):
+    pass
+class PayScreen(Screen):
+    pass
+
+class MyApp(App):
+    def build(self):
+        #return MyGridLayout()
+        sm = ScreenManager()
+        sm.transition= SwapTransition()
+        sm.add_widget(OrderScreen(name ='order'))
+        sm.add_widget(PayScreen(name = 'pay'))
+
+        return sm
+app = MyApp()
+app.run()
+
+
+
+
+
+
+<OrderScreen>
+    GridLayout:
+        cols: 2
+
+        Label:
+            font_size: 20
+            text: 'Адрес'
+            width: 100
+            background_color:1,1,1,1
+        TextInput:
+            font_size: 20
+            background_color:1,1,1,1
+        Label:
+            font_size: 20
+            text: 'Заказ'
+            background_color:1,1,1,1
+        TextInput:
+            font_size: 20
+            background_color:1,1,1,1
+        Label:
+            font_size: 20
+            text: 'Телефон'
+            background_color:1,1,1,1
+        TextInput:
+            font_size: 20
+            background_color:1,1,1,1
+
+        Button:
+            font_size: 50
+            text: 'Подтвердить'
+            width: 100
+            background_color:1,1,1,1
+            on_press:
+                root.manager.current = 'pay'
+<PayScreen>
+    BoxLayout:
+        orientation : 'vertical'
+        BoxLayout:
+            orientation : 'horizontal'
+            Label:
+                font_size: 20
+                text: 'Сумма оплаты'
+                background_color:1,1,1,1
+            TextInput:
+                font_size: 20
+                background_color:1,1,1,1
+        Button:
+            text: 'Подтвердить'
+
+
+
+
+
+
+
+
+
