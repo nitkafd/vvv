@@ -35,4 +35,9 @@ MDBoxLayout:
     MDTopAppBar:
         left_action_items: [['menu']]
         right_action_items: [['dots-vertical',['home']]
+    MDTabs:
+        Tab:
+            tittle: 'Tab1'
+        Tab:
+            tittle:'Tab'
 
