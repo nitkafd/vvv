@@ -1,0 +1,38 @@
+MDBoxLayout:
+    MDFillRoundFlatButton:
+        text: "Кнопка1"
+        font_size:50
+    MDFillRoundFlatButton:
+        text: "Кнопка2"
+        font_size:50
+    MDFillRoundFlatButton:
+        text: "Кнопка3"
+        font_size:50
+
+
+
+
+
+from kivymd.app import MDApp
+from kivy.lang.builder import Builder
+import os
+os.environ['KIVY_GL_BACKEND'] = 'angle_sdl2'
+
+
+class MyApp(MDApp):
+    def build(self):
+        return Builder.load_file('wi.kv')
+
+MyApp().run()
+
+
+
+
+
+
+
+MDBoxLayout:
+    MDTopAppBar:
+        left_action_items: [['menu']]
+        right_action_items: [['dots-vertical',['home']]
+
