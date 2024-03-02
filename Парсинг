@@ -1,0 +1,10 @@
+import requests
+import bs4
+
+response = requests.get('https://scrapingclub.com/exercise/list_basic/?page=3')
+soup = bs4.BeautifulSoup(response.text, features="html5lib")
+tag_p = soup.find_all('h4', ) #Найти по тегу чтото определенное
+for i in tag_p:
+    a = i.find('a')
+    print(a.text)
+print(tag_p)
