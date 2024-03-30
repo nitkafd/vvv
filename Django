@@ -1,0 +1,19 @@
+URLS
+
+from django.contrib import admin
+from django.urls import path
+import myproject.views
+
+urlpatterns = [
+    path('', myproject.views.index)   
+]
+
+
+
+
+views
+
+from django.http import HttpResponse
+
+def index(request):
+    return HttpResponse('Главная')
