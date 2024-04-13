@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" hres="styles.css">
+</head>
+<body>
+    <div>
+        <img src="https://sun6-20.userapi.com/s/v1/ig2/6pxgzXaQVjT80ImmbuX1O1YPSGm5828qOcFXvpsBaC7fkNFnlVaVzsFT44wl_dDGKOHrvtyadrwOgMYBRd2uv9cv.jpg?size=2369x2369&quality=95&crop=88,83,2369,2369&ava=1">
+    </div>
+</body>
+
+<style>
+блок{
+    background-color: black
+}
+</style>
+
+</html>
